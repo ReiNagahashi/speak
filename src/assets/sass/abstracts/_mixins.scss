@@ -1,0 +1,60 @@
+// Buttons
+@mixin buttonPush($color){
+    background-color: $color;
+    box-shadow: 0 6px darken($color, 10%);
+
+    &:hover {
+        box-shadow: 0 4px darken($color, 10%);
+        top: 2px;
+      }
+    &:active{
+      top: 1px;
+    }
+}
+// Login & register 
+
+@mixin authCardPosition($position){
+  display: flex;
+  align-items: center;
+  justify-content: $position;
+  min-height: 75rem;
+  padding-bottom: 10rem;
+  position: relative;
+  z-index: 10;
+}
+
+@mixin authCardContent(){
+  background-color: $color-blue-white;
+  width: 70rem;
+  border-radius: 5px;
+  padding: 4rem 8rem;
+  text-align: center;
+}
+
+// Modal
+@mixin container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation-name: modalopen;
+  animation-duration: 1s;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+// MEDIA QUERY
+@mixin respond($breakpoint){
+  @if($breakpoint == phone){
+      @media(max-width: 37.5em){ @content }; //600px
+  }
+  @if($breakpoint == tab-port){
+      @media(max-width: 56.25em ){ @content }; //900px
+  }
+  @if($breakpoint == tab-land){
+      @media(max-width: 75em){ @content }; //1200px
+  }
+  @if($breakpoint == big-desk){
+      @media(min-width: 112.5em){ @content }; //1800px
+  }
+}

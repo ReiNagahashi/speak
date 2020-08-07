@@ -1,0 +1,22 @@
+.signup{
+    background-color: $color-primary-en;
+    &__content{
+        @include authCardPosition(start);
+        margin-left: 0;
+    }
+
+    .signupCard{
+        @include authCardContent();
+        margin-left: 8rem;
+
+        &__paragraph{
+            margin: 3rem 0;
+            padding: 0 8rem;
+        }
+    }
+    // PROGRESS STROKE COLOR
+    .vue-progress-path .progress {
+        stroke: $color-primary-en !important;
+    }
+}
+

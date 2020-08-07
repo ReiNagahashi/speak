@@ -1,0 +1,50 @@
+// Margin
+$margin-grid:5rem;
+
+// Create Box model classes
+$spaceAmounts:(1,2,3,4);
+@each $space in $spaceAmounts {
+    // All around
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+    // top
+    .mt-#{$space}{
+        margin-top: #{$space}rem;
+    }
+     // bottom
+     .mb-#{$space}{
+        margin-bottom: #{$space}rem;
+    }
+     // left
+     .ml-#{$space}{
+        margin-left: #{$space}rem;
+    }
+     // right
+     .mr-#{$space}{
+        margin-right: #{$space}rem;
+    }
+}
+
+
+//Font-size for section title
+.section-title{
+    font-size: $font-size-xl;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family:  Courier;
+    font-weight: 100;
+}
+
+.home-title{
+    font-size: $font-size-xl;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family:  Courier;
+    font-weight: 100;
+    padding: 4rem;
+    text-align: center;
+    color: $color-white;
+}
+
+

@@ -1,0 +1,75 @@
+.hero{
+    height: 80rem;
+    position: relative;
+
+    & > *{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__title{
+        top: 25%;
+        font-size:4rem; 
+        font-family: "Hannari";
+        letter-spacing: 0.5rem;
+    }
+
+    &__paragraph{
+        top: 50%;
+        font-size: $font-size-s;
+        letter-spacing: 0.3rem;
+        width: 65%;
+        line-height: 2.5rem;
+
+        &--ja{
+            margin-bottom: 5rem;
+        }
+    }
+}
+// GREEN SECTION
+.green-section{
+        background-color: $color-primary-ja;
+
+        .latest{
+            padding: 5rem;
+            position: relative;
+            z-index: 10;
+        }
+}
+
+// Carousel global setting
+.carousel{
+    padding: 5rem;
+}
+
+
+// PINK SECTION
+.pink-section{
+    background-color: $color-primary-en;
+
+    .category__title{
+        font-size: $font-size-l;
+        color: $color-white;
+        padding: 5rem;
+    }
+
+    .rightSide{
+        padding-left: 15rem;
+        padding-right: 2rem;
+        &__title{
+            text-align: end;
+        }
+        .carousel{
+            text-align: -webkit-right;
+        }
+
+    }
+
+    .leftSide{
+        padding-right: 15rem;
+
+    }
+
+}

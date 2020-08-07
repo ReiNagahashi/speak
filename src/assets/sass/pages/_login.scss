@@ -1,0 +1,13 @@
+.login{
+    background-color: $color-primary-ja;
+   &__content{
+      @include authCardPosition(flex-end);
+    }
+    .loginCard{
+        @include authCardContent();
+
+        &__title{
+            margin-bottom: 5rem;
+        }
+    }
+}

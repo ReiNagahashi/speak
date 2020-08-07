@@ -1,0 +1,54 @@
+.btn{
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-size: $font-size-xs;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: none;
+        font-family: inherit;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &--normal{
+        border-radius: 3px;
+        padding: 1.4rem 2rem;;
+    }
+
+    &--square{
+        padding: 2rem;
+        border-radius: 2px;
+        font-size: $font-size-s;
+    }
+
+    &--round{
+        padding: 1rem;
+        border-radius: 50%;
+    }
+
+    &--middle{
+        padding: 1.2rem 3rem;
+        border-radius: 20px;
+    }
+
+    &--white{
+        @include buttonPush(#f8f8ff);
+        color:$color-default;
+    }
+
+    &--ja{
+        color: $color-white;
+        @include buttonPush($color-secondary-ja);
+    }
+    &--en{
+        color: $color-white;
+        @include buttonPush($color-secondary-en);
+    }
+
+ 
+}

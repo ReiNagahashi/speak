@@ -1,0 +1,100 @@
+.form{
+
+    &__group{
+        margin: 3rem 0;
+
+        & input:not([type=file]){
+            border:1px solid $color-grey-light ;
+            padding: 1.5rem 2rem;   
+            border-radius: 5px;
+            color: $color-grey-dark-3;
+            font-family: inherit;
+
+            &:focus{
+                border-color: $color-grey-dark-2;
+                outline: 0;
+            }
+        }
+
+        &input[type=text],input[type=password],[type=email]{
+            padding: 1.5rem 2rem;   
+            border-radius: 5px;
+        }
+
+        // Register & Login form style
+        .auth-form{
+
+            &__input-label{
+                display: flex;
+                align-items: center;
+                text-align: left;
+                margin: 3rem 0 2rem 0;
+                padding: 0 8rem;
+
+                & label{
+                    flex: 20%;
+                    font-size: $font-size-m;
+                }
+
+                & input{
+                    flex: 80%;
+                }  
+            }
+        }
+        &--error{
+            border-color: red !important;
+        }
+    }
+}
+
+// form colomun for create & edit page
+.form-colomun{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .label{
+        font-family: Courier;
+        font-size: $font-size-l;
+        margin-bottom: 3rem;
+    }
+
+    &__input{
+        width: 50%;
+    }
+}
+
+.radio-button{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+
+    &label, span{
+        margin-left: 5px;
+    }
+}
+
+.error{
+        color: red;
+}
+
+.textarea{
+    padding: 3rem 0;
+    border-radius: 5px;
+    font-family: inherit;
+    &:focus{
+        outline: 0;
+    }
+}
+
+// input file
+
+input[type="file"] {
+    height: 0;
+    width: 0;
+  }
+  
+  input[type="file"] + label {
+    margin-bottom: 1rem;
+    color: $color-default;
+  }

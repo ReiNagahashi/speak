@@ -1,0 +1,150 @@
+.card{
+    cursor: pointer;
+    
+    .card-content{
+        background-color: $color-white;
+        border-radius: 3px;
+        width: 30rem;
+        height: 45rem;
+
+        @include respond(tab-port){
+            width: 20rem;
+            height: 35rem;
+        }
+
+        .image{
+            height: 20rem;
+
+            @include respond(tab-port){
+                height: 16rem;
+            }
+        }
+
+        &__image{
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .card-front{
+        padding: 0 3rem;
+
+        &__title{
+            font-size: $font-size-m;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        &__description{
+            font-size: $font-size-s;
+            margin-bottom: 4rem;
+            height: 13%;
+            text-align: left;
+            line-height: 2.3rem;
+        }
+
+        .card-details{
+            display: flex;
+            align-items: center; 
+            font-size: $font-size-xs;
+
+            & > *{
+                @include respond(tab-port){
+                    display: none;
+                }
+            }
+
+            &__avatar{
+                height: 4rem;
+                width: 4rem;
+                border: 1px solid $color-default;
+                border-radius: 50%;
+            }
+
+            &__author{
+                font-weight: 600;
+                margin-left: 2.5rem;
+
+            }
+
+            &__date{
+                margin-left: auto;
+
+            }
+            
+        }
+    }
+}
+
+.newUser{
+    text-align: center;
+
+    &__title{
+        color: $color-white;
+    }
+
+    &__cards{
+        display: flex;
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+     
+    }
+
+    .userCard{
+        background-color: $color-white;
+        border-radius: 3px;
+        height: 32rem;
+        padding: 4rem;
+        transition: all .3s;
+        
+        &:not(:first-child){
+            margin-left: 4rem;
+
+            @include respond(tab-port){
+                margin: 4rem 0;
+            }
+        }
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 1.5rem 4rem rgba($color-black,.6);
+        }
+
+        .userCard-content{
+            .userCard-header{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                &__image{
+                    height: 6rem;
+                    width: 6rem;
+                    border: 1px solid $color-default;
+                    border-radius: 50%;
+
+                    @include respond(tab-port){
+                        height: 4rem;
+                        width: 4rem;
+                    }
+                }
+    
+                &__name{
+                    font-size: $font-size-l;
+                    margin-left: 1rem;
+                }
+
+                .flag{
+                    height: 3rem;
+                }
+            }
+        }
+    }
+
+    
+}

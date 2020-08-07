@@ -1,0 +1,34 @@
+.post-caption{
+    text-align: center;
+}
+
+.post-form{
+        text-align: center;
+        &__title{
+            padding-top: 2rem;
+        }
+
+
+        .categories-description{
+            display: flex;
+            justify-content: center;
+
+            & > * {
+                flex: 1;
+            }
+        }
+    }
+
+.uploadValue{
+    margin-top: 2rem;
+}
+
+// Edit Section
+.editSection{
+    background-color: $color-primary-ja;
+    color: $color-white;
+
+    .editContent{
+        padding: 5rem;
+    }
+}
